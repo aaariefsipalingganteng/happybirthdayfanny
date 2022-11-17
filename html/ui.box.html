@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fanny - Quotes</title>
+  <meta name="description" content="Music, Musician, Bootstrap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/spotify_green_logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="images/spotify_green_logo.png">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+
+  <!-- build:css css/styles/app.min.css -->
+  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+  
+  <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.css" type="text/css" />
+  <link rel="stylesheet" href="libs/mediaelement/build/mediaelementplayer.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/mediaelement/build/mep.css" type="text/css" />
+
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="app dk" id="app">
+
+<!-- ############ LAYOUT START-->
+
+  <!-- content -->
+  <div id="content" class="app-content white bg" role="main">
+    <div class="app-header white lt box-shadow-z1">
+      <div class="navbar" data-pjax>
+        <a data-toggle="collapse" data-target="#navbar" class="navbar-item pull-right hidden-md-up m-r-0 m-l">
+          <i class="material-icons">menu</i>
+        </a>
+        <!-- brand -->
+        <a class="navbar-brand md">
+
+  <g fill-rule="evenodd" class="svelte-1gcdbl9">
+
+  <img src="images/Spotify_Logo_RGB_White.png" alt="logo" class="logo">
+  </a>
+        <!-- / brand -->
+
+        <!-- nabar right -->
+        <ul class="nav navbar-nav pull-right">
+          <li class="nav-item">
+            <a class="nav-link">
+    <i class="fa fa-bell text-lg m-l"></i><b class="label rounded danger up">3</b>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <span class="hidden-xs-down btn btn-sm rounded primary _600">
+                Upload
+              </span>
+              <span class="hidden-sm-up btn btn-sm btn-icon rounded primary">
+                <i class="material-icons">file_upload</i>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link clear" data-toggle="dropdown">
+              <span class="avatar w-32">
+                <img src="images/1.jpg" alt="...">
+              </span>
+            </a>
+          </li>
+        </ul>
+        <!-- / navbar right -->
+
+        <!-- navbar collapse -->
+        <div class="collapse navbar-toggleable-sm l-h-0 text-center" id="navbar">
+          <!-- link and dropdown -->
+          <ul class="nav navbar-nav nav-md inline text-primary-hover" data-ui-nav>
+            <li class="nav-item">
+              <a href="artist.detail.html" class="nav-link">
+                <span class="nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="player.html" class="nav-link">
+                <span class="nav-text">Playlist</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="browse.html" class="nav-link">
+                <span class="nav-text">Nice Try Sadtember</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="ui.box.html" class="nav-link">
+                <span class="nav-text">Quotes</span>
+              </a>
+            </li>
+          </ul>
+          <!-- / link and dropdown -->
+        </div>
+        <!-- / navbar collapse -->
+      </div>
+    </div>
+    <div class="app-footer app-player grey bg">
+      <div class="playlist" style="width:100%"></div>
+    </div>
+    <div class="app-body" id="view">
+
+<!-- ############ PAGE START-->
+<div class="padding">
+  <div class="row m-b">
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/book.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>It Starts With Us</h3>
+          <small>Colleen Hoover</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"It’s not the first time he’s mentioned I saved him back then, but every time he says it, I want to argue with him. I didn’t save him. All I did was fall in love with him.” -  Lily</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/book.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>It Starts With Us</h3>
+          <small>Colleen Hoover</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"In the past and for forever, you are my favorite person. Always have been. Always will be. I love you. Everything that you are.” - Atlas Corrigan</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/book2.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>It Ends With Us</h3>
+          <small>Colleen Hoover</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"Lily." he says."In the future...if by some miracle you ever find yourself in the position to fall in love again...fall in love with me." - Atlas Corrigan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row m-b">
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/book2.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>It Ends With Us</h3>
+          <small>Colleen Hoover</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"There is no such thing as bad people. We're all just people who sometimes do bad things.” - Ryle</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/theends.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>The End Of The F**king World</h3>
+          <small>Netflix Movies</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"That day, i learnt that silence is really loud. Deafening. When you have silence, it's hard to keep stuff out. It's all there. And you can't get rid of it." - James</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/theends.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>The End Of The F**king World</h3>
+          <small>Netflix Movies</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"You shouldn't just make people if you're going to abandon them. because they think they've done something wrong their whole lives." - Alyssa</p>
+        </div>
+      </div>
+    </div>
+  <div class="row m-b">
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/her.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>Her</h3>
+          <small>2013</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"I'm just always confused. All i do is hurt and confuse everyone around me." - Theodore</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="box">
+          <div class="box-header">
+            <a class="pull-left m-r">
+              <span class="w-40">
+                  <img src="images/stark.jpg" class="w-full" alt="...">
+               </span>
+            </a>
+            <h3>Avenger End Game</h3>
+            <small>Marvel</small>
+          </div>
+          <div class="box-tool">
+            <ul class="nav">
+              <li class="nav-item inline">
+                <a class="nav-link">
+                  <i class="fa fa-fw fa-refresh"></i>
+                </a>
+              </li>
+              <li class="nav-item inline dropdown">
+                <a class="nav-link" data-toggle="dropdown">
+                  <i class="fa fa-fw fa-ellipsis-v"></i>
+                </a>
+                <div class="dropdown-menu pull-right">
+                  <a class="dropdown-item">Action</a>
+                  <a class="dropdown-item">Another action</a>
+                  <a class="dropdown-item">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item">Separated link</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="box-body">
+            <p class="m-a-0">"I Love You 3000." - Tony stark</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/perksofbeingawallflower.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>Perks of Being a Wallflower</h3>
+          <small>2012</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"I wanted to laugh. Or maybe get mad. Or maybe shrug at how strange everyone was, especially me."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row m-b">  
+    <div class="col-sm-4">
+        <div class="box">
+          <div class="box-header">
+            <a class="pull-left m-r">
+              <span class="w-40">
+                  <img src="images/strangerthings3.jpg" class="w-full" alt="...">
+               </span>
+            </a>
+            <h3>Stranger Things</h3>
+            <small>Netflix</small>
+          </div>
+          <div class="box-tool">
+            <ul class="nav">
+              <li class="nav-item inline">
+                <a class="nav-link">
+                  <i class="fa fa-fw fa-refresh"></i>
+                </a>
+              </li>
+              <li class="nav-item inline dropdown">
+                <a class="nav-link" data-toggle="dropdown">
+                  <i class="fa fa-fw fa-ellipsis-v"></i>
+                </a>
+                <div class="dropdown-menu pull-right">
+                  <a class="dropdown-item">Action</a>
+                  <a class="dropdown-item">Another action</a>
+                  <a class="dropdown-item">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item">Separated link</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="box-body">
+            <p class="m-a-0">"You act like you're all alone out there in the world, but you're not. I'm gonna be there with you the whole time." - Joyce Byers</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="box-header">
+          <a class="pull-left m-r">
+            <span class="w-40">
+                <img src="images/strangerthings3.jpg" class="w-full" alt="...">
+             </span>
+          </a>
+          <h3>Stranger Things</h3>
+          <small>Netflix</small>
+        </div>
+        <div class="box-tool">
+          <ul class="nav">
+            <li class="nav-item inline">
+              <a class="nav-link">
+                <i class="fa fa-fw fa-refresh"></i>
+              </a>
+            </li>
+            <li class="nav-item inline dropdown">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="fa fa-fw fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu pull-right">
+                <a class="dropdown-item">Action</a>
+                <a class="dropdown-item">Another action</a>
+                <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Separated link</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-body">
+          <p class="m-a-0">"You know, you're not what i thought you woulds be like. Mean andscary? Yeah, i actually thought you would be kinda mean and scary too." - Eddie Munson Moments</p>
+        </div>
+      </div>
+  </div> 
+</div>
+
+<!-- ############ PAGE END-->
+
+    </div>
+  </div>
+  <!-- / -->
+
+  
+  <!-- ############ SWITHCHER START-->
+    <div id="switcher">
+      <div class="switcher white" id="sw-theme">
+        <a data-ui-toggle-class="active" data-ui-target="#sw-theme" class="white sw-btn">
+          <i class="fa fa-gear text-muted"></i>
+        </a>
+        <div class="box-header">
+          <strong>Theme Switcher</strong>
+        </div>
+        <div class="box-divider"></div>
+        <div class="box-body">
+          <p>Colors:</p>
+          <p data-target="color">
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+				        <input type="radio" name="color" value="light greeny">
+				        <i class="light green"></i>
+			      </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="accent">
+              <i class="accent"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warn">
+              <i class="warn"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="success">
+              <i class="success"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="info">
+              <i class="info"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="blue">
+              <i class="blue"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warning">
+              <i class="warning"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="danger">
+              <i class="danger"></i>
+            </label>
+          </p>
+          <p>Themes:</p>
+          <div data-target="bg" class="text-u-c text-center _600 clearfix">
+            <label class="p-a col-xs-3 black pointer m-a-0">
+              <input type="radio" name="theme" value="black" hidden>
+              <i class="active-checked fa fa-check"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- ############ SWITHCHER END-->
+  <!-- ############ SEARCH START -->
+    <div class="modal white lt fade" id="search-modal" data-backdrop="false">
+      <a data-dismiss="modal" class="text-muted text-lg p-x modal-close-btn">&times;</a>
+      <div class="row-col">
+        <div class="p-a-lg h-v row-cell v-m">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <div id="search-result" class="animated fadeIn">
+                <div class="row">
+                  <div class="col-sm-12">
+					<div class="box">
+						<div class="item">
+							<img src="images/liveig.jpg" alt="." class="w-full">
+						</div>
+						<div class="p-a">
+							<div class="text-muted m-b-xs">
+								<a class="m-r"><i class="fa fa-heart-o"></i> 34</a>
+								<a><i class="fa fa-bookmark-o"></i> 20</a>
+							</div>
+							<div class="m-b h-2x"><a class="_800">Happy Birthday Fanny !</a></div>
+							<div class="m-b h-3x">
+								<div class="m-b-sm">"May your birthday be filled with laughter!"</div>
+								<a><img src="images/48.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/49.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/38.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/32.jpg" alt="." class="w-32 rounded"></a>
+								<a class="btn btn-sm danger rounded"><i class="fa fa-plus"></i> 99</a>
+							</div>
+							<div><a class="btn btn-xs white">Read More</a></div>
+						</div>
+					</div>
+				  </div>
+                </div>
+              </div>
+              <div id="top-search" class="btn-groups">
+                <strong class="text-muted">Hobinya : </strong>
+                <a class="btn btn-xs white">Ngambek</a> 
+                <a class="btn btn-xs white">Marah2</a> 
+                <a class="btn btn-xs white">Jamet</a> 
+                <a class="btn btn-xs white">gamau diliat lewat spion</a> 
+                <a class="btn btn-xs white">Suka mukulin helm</a> 
+                <a class="btn btn-xs white">Hiatus</a> 
+                <a class="btn btn-xs white">Si paling ngambis</a> 
+                <a class="btn btn-xs white">teriak2 dijalan</a> 
+                <a class="btn btn-xs white">Suka mas gilang</a> 
+                <a class="btn btn-xs white">Skrng dideketin cowo up</a> 
+                <a class="btn btn-xs white">dah itu aja</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ############ SEARCH END -->
+  <!-- ############ SHARE START -->
+  <div id="share-modal" class="modal fade animate">
+    <div class="modal-dialog">
+      <div class="modal-content fade-down">
+        <div class="modal-header">
+  
+          <h5 class="modal-title">Share</h5>
+        </div>
+        <div class="modal-body p-lg">
+          <div id="share-list" class="m-b">
+            <a href="https://www.facebook.com/fanny.bintang.77" class="btn btn-icon btn-social rounded btn-social-colored indigo" title="Facebook">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-facebook"></i>
+            </a>
+  
+            <a href="" class="btn btn-icon btn-social rounded btn-social-colored light-blue" title="Twitter">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-twitter"></i>
+            </a>
+  
+            <a href="https://www.instagram.com/_fannybintang/" class="btn btn-icon btn-social rounded btn-social-colored light-blue-800" title="Instagram" >
+              <i class="fa fa-instagram"></i>
+              <i class="fa fa-instagram"></i>
+            </a>
+      
+  
+            <a href="" class="btn btn-icon btn-social rounded btn-social-colored red-600" title="Google+">
+              <i class="fa fa-google-plus"></i>
+              <i class="fa fa-google-plus"></i>
+            </a>
+  
+            <a href="" class="btn btn-icon btn-social rounded btn-social-colored red-700" title="Pinterst">
+              <i class="fa fa-pinterest"></i>
+              <i class="fa fa-pinterest"></i>
+            </a>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ############ SHARE END -->
+
+<!-- ############ LAYOUT END-->
+  </div>
+
+<!-- build:js scripts/app.min.js -->
+<!-- jQuery -->
+  <script src="libs/jquery/dist/jquery.js"></script>
+<!-- Bootstrap -->
+  <script src="libs/tether/dist/js/tether.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+  <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="libs/jquery.stellar/jquery.stellar.min.js"></script>
+  <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="libs/jscroll/jquery.jscroll.min.js"></script>
+  <script src="libs/PACE/pace.min.js"></script>
+  <script src="libs/jquery-pjax/jquery.pjax.js"></script>
+
+  <script src="libs/mediaelement/build/mediaelement-and-player.min.js"></script>
+  <script src="libs/mediaelement/build/mep.js"></script>
+  <script src="scripts/player.js"></script>
+
+  <script src="scripts/config.lazyload.js"></script>
+  <script src="scripts/ui-load.js"></script>
+  <script src="scripts/ui-jp.js"></script>
+  <script src="scripts/ui-include.js"></script>
+  <script src="scripts/ui-device.js"></script>
+  <script src="scripts/ui-form.js"></script>
+  <script src="scripts/ui-nav.js"></script>
+  <script src="scripts/ui-screenfull.js"></script>
+  <script src="scripts/ui-scroll-to.js"></script>
+  <script src="scripts/ui-toggle-class.js"></script>
+  <script src="scripts/ui-taburl.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/site.js"></script>
+  <script src="scripts/ajax.js"></script>
+<!-- endbuild -->
+</body>
+</html>

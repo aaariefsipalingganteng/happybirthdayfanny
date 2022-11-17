@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fanny - Playlist</title>
+  <meta name="description" content="Music, Musician, Bootstrap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/spotify_green_logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="images/spotify_green_logo.png">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+
+  <!-- build:css css/styles/app.min.css -->
+  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+  
+  <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.css" type="text/css" />
+  <link rel="stylesheet" href="libs/mediaelement/build/mediaelementplayer.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/mediaelement/build/mep.css" type="text/css" />
+
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="app dk" id="app">
+
+<!-- ############ LAYOUT START-->
+
+  <!-- content -->
+  <div id="content" class="app-content white bg" role="main">
+    <div class="app-header white lt box-shadow-z1">
+        <div class="navbar" data-pjax>
+              <a data-toggle="collapse" data-target="#navbar" class="navbar-item pull-right hidden-md-up m-r-0 m-l">
+                <i class="material-icons">menu</i>
+              </a>
+              <!-- brand -->
+              <a class="navbar-brand md">
+
+				<g fill-rule="evenodd" class="svelte-1gcdbl9">
+	
+				<img src="images/Spotify_Logo_RGB_White.png" alt="logo" class="logo">
+			  </a>
+              <!-- / brand -->
+      
+              <!-- nabar right -->
+              <ul class="nav navbar-nav pull-right">
+                <li class="nav-item">
+                  <a class="nav-link">
+					<i class="fa fa-bell text-lg m-l"></i><b class="label rounded danger up">3</b>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <span class="hidden-xs-down btn btn-sm rounded primary _600">
+                      Upload
+                    </span>
+                    <span class="hidden-sm-up btn btn-sm btn-icon rounded primary">
+                      <i class="material-icons">file_upload</i>
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link clear" data-toggle="dropdown">
+                    <span class="avatar w-32">
+                      <img src="images/1.jpg" alt="...">
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <!-- / navbar right -->
+      
+              <!-- navbar collapse -->
+              <div class="collapse navbar-toggleable-sm l-h-0 text-center" id="navbar">
+                <!-- link and dropdown -->
+                <ul class="nav navbar-nav nav-md inline text-primary-hover" data-ui-nav>
+                  <li class="nav-item">
+                    <a href="artist.detail.html" class="nav-link">
+                      <span class="nav-text">Home</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="player.html" class="nav-link">
+                      <span class="nav-text">Playlist</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="browse.html" class="nav-link">
+                      <span class="nav-text">Nice Try Sadtember</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="ui.box.html" class="nav-link">
+                      <span class="nav-text">Quotes</span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- / link and dropdown -->
+              </div>
+              <!-- / navbar collapse -->
+        </div>
+    </div>
+    <div class="app-footer app-player grey bg">
+      <div class="playlist" style="width:100%"></div>
+    </div>
+    <div class="app-body" id="view">
+
+<!-- ############ PAGE START-->
+
+<div class="page-content">
+
+	<div class="padding p-b-0">
+        <div class="page-title m-b">
+			<h2 class="inline m-a-0">Nih dengerin ya...</h2>
+			<div class="dropdown inline">
+			  <button class="btn btn-sm no-bg h4 m-y-0 v-b dropdown-toggle text-primary" data-toggle="dropdown">All</button>
+			  <div class="dropdown-menu">
+				<a class="dropdown-item active">
+				  All
+				</a>
+				<a class="dropdown-item">
+				  acoustic
+				</a>
+				<a class="dropdown-item">
+				  ambient
+				</a>
+				<a class="dropdown-item">
+				  blues
+				</a>
+				<a class="dropdown-item">
+				  classical
+				</a>
+				<a class="dropdown-item">
+				  country
+				</a>
+				<a class="dropdown-item">
+				  electronic
+				</a>
+				<a class="dropdown-item">
+				  emo
+				</a>
+				<a class="dropdown-item">
+				  folk
+				</a>
+				<a class="dropdown-item">
+				  hardcore
+				</a>
+				<a class="dropdown-item">
+				  hip hop
+				</a>
+				<a class="dropdown-item">
+				  indie
+				</a>
+				<a class="dropdown-item">
+				  jazz
+				</a>
+				<a class="dropdown-item">
+				  latin
+				</a>
+				<a class="dropdown-item">
+				  metal
+				</a>
+				<a class="dropdown-item">
+				  pop
+				</a>
+				<a class="dropdown-item">
+				  pop punk
+				</a>
+				<a class="dropdown-item">
+				  punk
+				</a>
+				<a class="dropdown-item">
+				  reggae
+				</a>
+				<a class="dropdown-item">
+				  rnb
+				</a>
+				<a class="dropdown-item">
+				  rock
+				</a>
+				<a class="dropdown-item">
+				  soul
+				</a>
+				<a class="dropdown-item">
+				  world
+				</a>
+			  </div>
+			</div>
+		  </div>
+		<div class="black dk">
+			<div class="row no-gutter item-info-overlay">
+			  <div class="col-sm-6 text-white">
+				<div class="owl-carousel owl-theme owl-dots-sm owl-dots-bottom-left " data-ui-jp="owlCarousel" data-ui-options="{
+							 items: 1
+							,loop: true
+							,autoplay: true
+							,nav: true
+							
+						  }">
+				  <div class="item r" data-id="item-34" data-src="../html/audio/Seafret - Atlantis (Lyrics)_C5T6v0tymhc.mp3">
+					<div class="item-media primary">
+					  <a class="item-media-content" style="background-image: url('images/35.jpg');"></a>
+					  <div class="item-overlay center">
+						<button class="btn-playpause">Play</button>
+					  </div>
+					</div>
+					<div class="item-info">
+					  <div class="item-overlay bottom text-right">
+						<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+						<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+						<div class="dropdown-menu pull-right black lt"></div>
+					  </div>
+					  <div class="item-title text-ellipsis">
+						<a>Atlantis</a>
+					  </div>
+					  <div class="item-author text-sm text-ellipsis">
+						<a class="text-muted">Seafret</a>
+					  </div>
+					</div>
+				  </div>
+				  <div class="item r" data-id="item-35" data-src="../html/audio/Surf Curse - Freaks [Lyrics]_RJnMWK9mrgQ.mp3">
+					<div class="item-media info">
+					  <a class="item-media-content" style="background-image: url('images/37.jpg');"></a>
+					  <div class="item-overlay center">
+						<button class="btn-playpause">Play</button>
+					  </div>
+					</div>
+					<div class="item-info">
+					  <div class="item-overlay bottom text-right">
+						<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+						<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+						<div class="dropdown-menu pull-right black lt"></div>
+					  </div>
+					  <div class="item-title text-ellipsis">
+						<a>Freaks</a>
+					  </div>
+					  <div class="item-author text-sm text-ellipsis">
+						<a class="text-muted">Surf Curse</a>
+					  </div>
+					</div>
+				  </div>
+				  <div class="item r" data-id="item-36" data-src="../html/audio/Ghost - Mary On A Cross (Official Audio)_k5mX3NkA7jM.mp3">
+					<div class="item-media accent">
+					  <a class="item-media-content" style="background-image: url('images/33.jpg');"></a>
+					  <div class="item-overlay center">
+						<button class="btn-playpause">Play</button>
+					  </div>
+					</div>
+					<div class="item-info">
+					  <div class="item-overlay bottom text-right">
+						<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+						<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+						<div class="dropdown-menu pull-right black lt"></div>
+					  </div>
+					  <div class="item-title text-ellipsis">
+						<a>Mary On A Cross</a>
+					  </div>
+					  <div class="item-author text-sm text-ellipsis">
+						<a class="text-muted">Ghost</a>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+				  <div class="col-sm-3 col-xs-6">
+					  <div class="item r" data-id="item-37" data-src="../html/audio/Stephen Dawes - teenage dream (Lyrics)_AYL_ulwRNeQ.mp3">
+						  <div class="item-media ">
+							  <a class="item-media-content" style="background-image: url('images/36.jpg');"></a>
+							  <div class="item-overlay center">
+								  <button class="btn-playpause">Play</button>
+							  </div>
+						  </div>
+						  <div class="item-info">
+							  <div class="item-overlay bottom text-right">
+								  <a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+								  <a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+								  <div class="dropdown-menu pull-right black lt"></div>
+							  </div>
+							  <div class="item-title text-ellipsis">
+								  <a>Teenage Dream</a>
+							  </div>
+							  <div class="item-author text-sm text-ellipsis ">
+								  <a class="text-muted">Stephen Dawes</a>
+							  </div>
+			  
+			  
+						  </div>
+					  </div>
+				  </div>
+				  <div class="col-sm-3 col-xs-6">
+					  <div class="item r" data-id="item-38" data-src="../html/audio/Ariana Grande, Justin Bieber - Stuck With U (Lyrics)_fz78HOxOgEY.mp3">
+						  <div class="item-media ">
+							  <a class="item-media-content" style="background-image: url('images/41.jpg');"></a>
+							  <div class="item-overlay center">
+								  <button class="btn-playpause">Play</button>
+							  </div>
+						  </div>
+						  <div class="item-info">
+							  <div class="item-overlay bottom text-right">
+								  <a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+								  <a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+								  <div class="dropdown-menu pull-right black lt"></div>
+							  </div>
+							  <div class="item-title text-ellipsis">
+								  <a>Stuck With U</a>
+							  </div>
+							  <div class="item-author text-sm text-ellipsis ">
+								  <a class="text-muted">Ariana Grande, Justin Bieber</a>
+							  </div>
+			  
+			  
+						  </div>
+					  </div>
+				  </div>
+				  <div class="col-sm-3 col-xs-6">
+					  <div class="item r" data-id="item-39" data-src="../html/audio/Benson Boone -  In the Stars (Official Lyric Video)_2n5GKLdrTfk.mp3">
+						  <div class="item-media ">
+							  <a class="item-media-content" style="background-image: url('images/39.jpg');"></a>
+							  <div class="item-overlay center">
+								  <button class="btn-playpause">Play</button>
+							  </div>
+						  </div>
+						  <div class="item-info">
+							  <div class="item-overlay bottom text-right">
+								  <a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+								  <a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+								  <div class="dropdown-menu pull-right black lt"></div>
+							  </div>
+							  <div class="item-title text-ellipsis">
+								  <a>In the Stars</a>
+							  </div>
+							  <div class="item-author text-sm text-ellipsis ">
+								  <a class="text-muted">Benson Boone</a>
+							  </div>
+			  
+			  
+						  </div>
+					  </div>
+				  </div>
+				  <div class="col-sm-3 col-xs-6">
+					  <div class="item r" data-id="item-40" data-src="../html/audio/beach bunny - prom queen LYRICS_izpiLaDTgMw.mp3">
+						  <div class="item-media ">
+							  <a class="item-media-content" style="background-image: url('images/40.jpg');"></a>
+							  <div class="item-overlay center">
+								  <button class="btn-playpause">Play</button>
+							  </div>
+						  </div>
+						  <div class="item-info">
+							  <div class="item-overlay bottom text-right">
+								  <a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+								  <a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+								  <div class="dropdown-menu pull-right black lt"></div>
+							  </div>
+							  <div class="item-title text-ellipsis">
+								  <a>Prom Queen</a>
+							  </div>
+							  <div class="item-author text-sm text-ellipsis ">
+								  <a class="text-muted">Beach Bunny</a>
+							  </div>
+			  
+			  
+						  </div>
+					  </div>
+				  </div>
+			</div>
+		  </div>
+	</div>
+	
+	<div class="row-col">
+		<div class="col-lg-9 b-r no-border-md">
+			<div class="padding">
+				<h2 class="widget-title h4 m-b">Treading</h2>
+				<div class="owl-carousel owl-theme owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
+					margin: 20,
+					responsiveClass:true,
+				    responsive:{
+				    	0:{
+				    		items: 2
+				    	},
+				        543:{
+				            items: 3
+				        }
+				    }
+				}">
+					    <div class="">
+					    	<div class="item r" data-id="item-41" data-src="../html/audio/Rumah ke Rumah - Hindia (Lirik Lagu)_z3sGBXWAyTM.mp3">
+								<div class="item-media item-media-4by3">
+									<a class="item-media-content" style="background-image: url('images/RumahKeRumah.jpg');"></a>
+									<div class="item-overlay center">
+										<button class="btn-playpause">Play</button>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-overlay bottom text-right">
+										<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+										<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+										<div class="dropdown-menu pull-right black lt"></div>
+									</div>
+									<div class="item-title text-ellipsis">
+										<a>Rumah Ke Rumah</a>
+									</div>
+									<div class="item-author text-sm text-ellipsis ">
+										<a class="text-muted">Hindia</a>
+									</div>
+					
+					
+								</div>
+							</div>
+						</div>
+					    <div class="">
+					    	<div class="item r" data-id="item-42" data-src="../html/audio/Hindia - Evaluasi Lirik_0yaHsxLnLno.mp3">
+								<div class="item-media item-media-4by3">
+									<a class="item-media-content" style="background-image: url('images/Evaluasi.jpg');"></a>
+									<div class="item-overlay center">
+										<button class="btn-playpause">Play</button>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-overlay bottom text-right">
+										<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+										<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+										<div class="dropdown-menu pull-right black lt"></div>
+									</div>
+									<div class="item-title text-ellipsis">
+										<a>Evaluasi</a>
+									</div>
+									<div class="item-author text-sm text-ellipsis ">
+										<a class="text-muted">Hindia</a>
+									</div>
+					
+					
+								</div>
+							</div>
+						</div>
+					    <div class="">
+					    	<div class="item r" data-id="item-43" data-src="../html/audio/Pamungkas -  I Love You But I'm Letting Go_NO_cVedXdmM.mp3">
+								<div class="item-media item-media-4by3">
+									<a class="item-media-content" style="background-image: url('images/Pams.jpg');"></a>
+									<div class="item-overlay center">
+										<button class="btn-playpause">Play</button>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-overlay bottom text-right">
+										<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+										<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+										<div class="dropdown-menu pull-right black lt"></div>
+									</div>
+									<div class="item-title text-ellipsis">
+										<a>I Love You But I'm Letting Go</a>
+									</div>
+									<div class="item-author text-sm text-ellipsis ">
+										<a class="text-muted">Pamungkas</a>
+									</div>
+					
+					
+								</div>
+							</div>
+						</div>
+					    <div class="">
+					    	<div class="item r" data-id="item-44" data-src="../html/audio/Ed Sheeran - The Joker And The Queen [Official Lyric Video]_m9f4XtNj1Vg.mp3">
+								<div class="item-media item-media-4by3">
+									<a class="item-media-content" style="background-image: url('images/TheJokerAndTheQueen.jpg');"></a>
+									<div class="item-overlay center">
+										<button class="btn-playpause">Play</button>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-overlay bottom text-right">
+										<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+										<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+										<div class="dropdown-menu pull-right black lt"></div>
+									</div>
+									<div class="item-title text-ellipsis">
+										<a>The Joker And The Queen</a>
+									</div>
+									<div class="item-author text-sm text-ellipsis ">
+										<a class="text-muted">Ed Sheeran, Taylor Swift</a>
+									</div>
+					
+					
+								</div>
+							</div>
+						</div>
+					    <div class="">
+					    	<div class="item r" data-id="item-45" data-src="../html/audio/Amigdala - Tuhan sebut sia-sia LIRIK (LYRIC VIDEO)_uvaLYE6g7wY.mp3">
+								<div class="item-media item-media-4by3">
+									<a class="item-media-content" style="background-image: url('images/TuhanSebutSia-Sia.jpg');"></a>
+									<div class="item-overlay center">
+										<button class="btn-playpause">Play</button>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-overlay bottom text-right">
+										<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+										<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+										<div class="dropdown-menu pull-right black lt"></div>
+									</div>
+									<div class="item-title text-ellipsis">
+										<a>Tuhan Sebut Sia-Sia</a>
+									</div>
+									<div class="item-author text-sm text-ellipsis ">
+										<a class="text-muted">Amigdala</a>
+									</div>
+					
+					
+								</div>
+							</div>
+						</div>
+					    <div class="">
+					    	<div class="item r" data-id="item-46" data-src="../html/audio/The Script - The Man Who Can’t Be Moved (Official Video)_gS9o1FAszdk.mp3">
+								<div class="item-media item-media-4by3">
+									<a class="item-media-content" style="background-image: url('images/TheScript.jpg');"></a>
+									<div class="item-overlay center">
+										<button class="btn-playpause">Play</button>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-overlay bottom text-right">
+										<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+										<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+										<div class="dropdown-menu pull-right black lt"></div>
+									</div>
+									<div class="item-title text-ellipsis">
+										<a>The Man Who Can’t Be Moved</a>
+									</div>
+									<div class="item-author text-sm text-ellipsis ">
+										<a class="text-muted">The Script</a>
+									</div>
+					
+					
+								</div>
+							</div>
+						</div>
+					    <div class="">
+					    	<div class="item r" data-id="item-47" data-src="../html/audio/Rosa Linn - SNAP (Lyrics)_KZZiJJWXEGg.mp3">
+								<div class="item-media item-media-4by3">
+									<a class="item-media-content" style="background-image: url('images/SNAP.jpg');"></a>
+									<div class="item-overlay center">
+										<button class="btn-playpause">Play</button>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-overlay bottom text-right">
+										<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+										<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+										<div class="dropdown-menu pull-right black lt"></div>
+									</div>
+									<div class="item-title text-ellipsis">
+										<a>SNAP</a>
+									</div>
+									<div class="item-author text-sm text-ellipsis ">
+										<a class="text-muted">Rosa Linn</a>
+									</div>		
+								</div>
+							</div>
+						</div>
+					    <div class="">
+					    	<div class="item r" data-id="item-48" data-src="../html/audio/There Is a Light That Never Goes Out (2011 Remaster)_3r-qDvD3F3c.mp3">
+								<div class="item-media item-media-4by3">
+									<a class="item-media-content" style="background-image: url('images/TheSmiths.jpg');"></a>
+									<div class="item-overlay center">
+										<button class="btn-playpause">Play</button>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-overlay bottom text-right">
+										<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+										<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+										<div class="dropdown-menu pull-right black lt"></div>
+									</div>
+									<div class="item-title text-ellipsis">
+										<a>There Is a Light That Never Goes Out - 2011 Remaster</a>
+									</div>
+									<div class="item-author text-sm text-ellipsis ">
+										<a class="text-muted">The Smiths</a>
+									</div>
+					
+					
+								</div>
+							</div>
+						</div>
+				</div>
+				<h2 class="widget-title h4 m-b">New</h2>
+				<div class="tab-content">
+					<div class="tab-pane active" id="track">
+					  <div class="row item-list item-list-by m-b">
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-49" data-src="../html/audio/The Weeknd - Save Your Tears (Lyrics)_3o4ug07qJBI.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/34.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>Save Your Tears</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">The Weeknd</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Synth-Pop</a></span>
+										  <span class="item-meta-date text-xs">02.04.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Litatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-50" data-src="../html/audio/graham coxon - walking all day (lyrics)_jVN_SXht4C4.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/43.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>Walking All Day</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">Graham Coxon</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Children's Music</a></span>
+										  <span class="item-meta-date text-xs">02.04.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-51" data-src="../html/audio/d4vd - Here With Me (Official Audio)_B7Y4LHbpXv0.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/42.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a >Here With Me</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">d4vd</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Alternative/Indie</a></span>
+										  <span class="item-meta-date text-xs">04.05.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Verum hoc idem saepe faciamus inguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-52" data-src="../html/audio/The Lumineers - Ho Hey (Lyrics)_R6UqE6JzNLA.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/44.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>Ho Hey</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">The Lumineers</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Pop</a></span>
+										  <span class="item-meta-date text-xs">02.05.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Hidem saepe faciamus. Quid ad utilitatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-53" data-src="../html/audio/JVKE - golden hour (official music video)_PEM0Vs8jf1w.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/46.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>Golden Hour</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">JVKE</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Alternative/Indie</a></span>
+										  <span class="item-meta-date text-xs">09.06.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Utilitatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-54" data-src="../html/audio/Jeremy Zucker - all the kids are depressed __ Lyrics_d_So8lwTHAg.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/47.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>All The Kids Are Depressed</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">Jeremy Zucker</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Adult Contemporary, Singer-Songwriter</a></span>
+										  <span class="item-meta-date text-xs">09.04.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-55" data-src="../html/audio/James Arthur - Can I Be Him (Lyric Video)_s3j4Mo9iMn4.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/45.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>Can I Be Him</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">James Arthur</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Pop</a></span>
+										  <span class="item-meta-date text-xs">09.03.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Saepe faciamus. Quid ad utilitatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-56" data-src="../html/audio/Beach Weather - sex, drugs, etc. (Lyrics)_q_3gUUioyjs.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/Onta1.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>Sex, Drugs, Etc</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">Beach Weather</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Alternative/Indie, Pop</a></span>
+										  <span class="item-meta-date text-xs">09.04.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-57" data-src="../html/audio/Dream lantern_MtLHwqbE1eI.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/Suyy.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>Dream Lantern</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">RADWIMPS</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Rock</a></span>
+										  <span class="item-meta-date text-xs">09.05.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Verum hoc idem saepe faciamus. Quid ad utilitatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-58" data-src="../html/audio/JP Saxe - If The World Was Ending (Lyric Video) ft. Julia Michaels_RAov563V8vI.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/Onta3.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>If The World Was Ending </a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">Julia Michaels, JP Saxe</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Pop</a></span>
+										  <span class="item-meta-date text-xs">09.04.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Ad utilitatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-59" data-src="../html/audio/Iqbaal Ramadhan _ Hello You.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/Suyy2.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>Hello You (Ost Teman Tapi Menikah)</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">Iqbaal Ramadhan</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Pop</a></span>
+										  <span class="item-meta-date text-xs">05.05.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Quid ad utilitatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="item r" data-id="item-60" data-src="../html/audio/The Walters -- I Love You So_NwFVSclD_uc.mp3">
+									<div class="item-media ">
+										<a class="item-media-content" style="background-image: url('images/Badut.jpg');"></a>
+										<div class="item-overlay center">
+											<button class="btn-playpause">Play</button>
+										</div>
+									</div>
+									<div class="item-info">
+										<div class="item-overlay bottom text-right">
+											<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+											<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+											<div class="dropdown-menu pull-right black lt"></div>
+										</div>
+										<div class="item-title text-ellipsis">
+											<a>I Love You So</a>
+										</div>
+										<div class="item-author text-sm text-ellipsis hide">
+											<a class="text-muted">The Walters</a>
+										</div>
+										<div class="item-meta text-sm text-muted">
+										  <span class="item-meta-category"><a class="label">Alternative/Indie</a></span>
+										  <span class="item-meta-date text-xs">30.05.2016</span>
+										</div>
+						
+										<div class="item-except visible-list text-sm text-muted h-2x m-t-sm">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Nihil illinc huc pervenit.
+										</div>
+						
+										<div class="item-action visible-list m-t-sm">
+											<a class="btn btn-xs white">Edit</a>
+											<a class="btn btn-xs white" data-toggle="modal" data-target="#delete-modal">Delete</a>
+										</div>
+									</div>
+								</div>
+							</div>
+					  </div>
+					  <div class="col-sm-12">
+						<div class="box row-col" style="min-height:450px">
+							<div class="box-header b-b">
+								<h3>Comments <span class="label success">8</span></h3>
+							</div>
+							<div class="row-row dker">
+							  <div class="row-body">
+								<div class="row-inner">
+								  <div class="p-a-md">
+									<div class="m-b">
+									  <a class="pull-left w-40 m-r-sm">
+										  <img src="images/eddie.jpg" alt="..." class="w-full img-circle">
+									  </a>
+									  <div class="clear">
+										  <div>
+											<div class="p-a p-y-sm dark-white inline r">
+											  Hi Fanny, Gimana kabarnya...
+											</div>
+										</div>
+										<div class="m-t-xs">
+											<div class="p-a p-y-sm dark-white inline r">
+											  Ciyeee yang ulang tahun, 20 nich makin
+											  tua dong haha..
+											</div>
+										</div>
+										<div class="text-muted text-xs m-t-xs"><i class="fa fa-ok text-success"></i>30 minutes ago</div>
+									  </div>
+									</div>
+									<div class="m-b">
+									  <a class="pull-right w-40 m-l-sm">
+										  <img src="images/eddie.jpg" class="w-full img-circle" alt="...">
+									  </a>
+									  <div class="clear text-right">
+										<div class="p-a p-y-sm info inline text-left r">
+											Semoga semua yang diharapkan tercapai, God Bless You :)
+										</div>
+										<div class="text-muted text-xs m-t-xs">25 minutes ago</div>
+									  </div>
+									</div>
+									<div class="m-b">
+									  <a class="pull-left w-40 m-r-sm">
+										  <img src="images/eddie.jpg" alt="..." class="w-full img-circle">
+									  </a>
+									  <div class="clear">
+										<div class="p-a p-y-sm dark-white inline r">
+											kurangin pundung2nya ya di umur 20 th ini, klo ada tugas kuliah kerjain jgn nanti2 :)
+										</div>
+										<div class="text-muted text-xs m-t-xs"><i class="fa fa-ok text-success"></i>20 minutes ago</div>
+									  </div>
+									</div>
+									<div class="m-b">
+									  <a class="pull-right w-40 m-l-sm">
+										  <img src="images/eddie.jpg" class="w-full img-circle" alt="...">
+									  </a>
+									  <div class="clear text-right">
+										  <div>
+											<div class="p-a p-y-sm info inline text-left r">
+												Btw kamu hebat ya bisa jdi talent gtu, kdg klo lewatin UP ada foto kamu di banner
+											</div>
+										</div>
+										<div class="m-t-xs">
+											<div class="p-a p-y-sm info inline text-left r">
+												Apalagi pas ka Tamara wisuda, kamu jadi padusnya yah wkwk
+											</div>
+										</div>
+										<div class="text-muted text-xs m-t-xs">15 minutes ago</div>
+									  </div>
+									</div>
+									<div class="m-b">
+									  <a class="pull-left w-40 m-r-sm">
+										  <img src="images/eddie.jpg" alt="..." class="w-full img-circle">
+									  </a>
+									  <div class="clear">
+										  <div>
+											<div class="p-a p-y-sm dark-white inline r">
+												Tetep semangat ya semua hal yang kamu lakuin, klo cape istirahat
+											</div>
+										</div>
+										<div class="m-t-xs">
+											<div class="p-a p-y-sm dark-white inline r">
+												yudh kalo gtu, selalu bahagia ya jgn galau2 :(
+											</div>
+										</div>
+										<div class="text-muted text-xs m-t-xs"><i class="fa fa-ok text-success"></i>10 minutes ago</div>
+									  </div>
+									</div>
+									<div class="m-b">
+										<a class="pull-right w-40 m-l-sm">
+											<img src="images/eddie.jpg" class="w-full img-circle" alt="...">
+										</a>
+										<div class="clear text-right">
+											<div>
+											  <div class="p-a p-y-sm info inline text-left r">
+												Titip salam buat mamah papah ya..
+											  </div>
+										  </div>
+										  <div class="m-t-xs">
+											  <div class="p-a p-y-sm info inline text-left r">
+												Trs juga semoga happy ending sama yang di up :)
+											  </div>
+										  </div>
+										  <div class="text-muted text-xs m-t-xs">5 minutes ago</div>
+										</div>
+									  </div>
+									<div class="m-b">
+									  <a class="pull-left w-40 m-r-sm">
+										  <img src="images/eddie.jpg" alt="..." class="w-full img-circle">
+									  </a>
+									  <div class="clear">
+										<div class="p-a p-y-sm dark-white inline r">
+											Thank you for being the happiest person I know. Hope to see you again someday..
+										</div>
+										<div class="text-muted text-xs m-t-xs"><i class="fa fa-ok text-success"></i>5 seconds ago</div>
+									  </div>
+									</div>
+									<div class="m-b">
+									  <a class="pull-right w-40 m-l-sm">
+										  <img src="images/eddie.jpg" class="w-full img-circle" alt="...">
+									  </a>
+									  <div class="clear text-right">
+										  <div>
+											<div class="p-a p-y-sm info inline text-left r">
+												Once again, Happy Birthday Dear..
+											</div>
+										</div>
+										<div class="m-t-xs">
+											<div class="p-a p-y-sm info inline text-left r">
+												Fanny Bintang Ramadhania :)
+											</div>
+										</div>
+										<div class="text-muted text-xs m-t-xs">Just now</div>
+										<div class="text-muted text-xs m-t-xs">F has been offline</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							<div class="box-footer b-t">
+							  <form>
+								<div class="input-group input-group-sm">
+								  <input type="text" class="form-control" placeholder="Make your wish">
+								  <span class="input-group-btn">
+									<a href="https://wa.me/62895349494847" class="btn">SEND</a>
+								  </span>
+								</div>
+							  </form>
+							</div>
+						  </div>
+					  </div>
+					</div>
+				  </div>
+			</div>
+		</div>
+		<div class="col-lg-3 w-xxl w-auto-md">
+		  <div class="padding" style="bottom: 60px;" data-ui-jp="stick_in_parent">
+			<h6 class="text text-muted">Nice Try Sadtember</h6>
+			<div class="row item-list item-list-sm m-b">
+      		    <div class="col-xs-12">
+      		    	<div class="item r" data-id="item-" data-src="../html/audio/Ed Sheeran - Perfect (Lyrics).mp3">
+      					<div class="item-media ">
+      						<a class="item-media-content" style="background-image: url('images/edsheeran.jpg');"></a>
+      					</div>
+      					<div class="item-info">
+      						<div class="item-title text-ellipsis">
+      							<a>Perfect</a>
+      						</div>
+      						<div class="item-author text-sm text-ellipsis ">
+      							<a class="text-muted">Ed Sheeran</a>
+      						</div>
+      		
+      		
+      					</div>
+      				</div>
+      			</div>
+      		    <div class="col-xs-12">
+      		    	<div class="item r" data-id="item-" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+      					<div class="item-media ">
+      						<a class="item-media-content" style="background-image: url('images/anotherlove.jpg');"></a>
+      					</div>
+      					<div class="item-info">
+      						<div class="item-title text-ellipsis">
+      							<a>Another Love</a>
+      						</div>
+      						<div class="item-author text-sm text-ellipsis ">
+      							<a class="text-muted">Tom Odell</a>
+      						</div>
+      		
+      		
+      					</div>
+      				</div>
+      			</div>
+      		    <div class="col-xs-12">
+      		    	<div class="item r" data-id="item-" data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+      					<div class="item-media ">
+      						<a class="item-media-content" style="background-image: url('images/beforeyougo.jpg');"></a>
+      					</div>
+      					<div class="item-info">
+      						<div class="item-title text-ellipsis">
+      							<a>Before You Go</a>
+      						</div>
+      						<div class="item-author text-sm text-ellipsis ">
+      							<a class="text-muted">Lewis Capaldi</a>
+      						</div>
+      		
+      		
+      					</div>
+      				</div>
+      			</div>
+      		    <div class="col-xs-12">
+      		    	<div class="item r" data-id="item-" data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+      					<div class="item-media ">
+      						<a class="item-media-content" style="background-image: url('images/IDK.jpg');"></a>
+      					</div>
+      					<div class="item-info">
+      						<div class="item-title text-ellipsis">
+      							<a>IDK You Yet</a>
+      						</div>
+      						<div class="item-author text-sm text-ellipsis ">
+      							<a class="text-muted">Alexander 23</a>
+      						</div>
+      		
+      		
+      					</div>
+      				</div>
+      			</div>
+      		    <div class="col-xs-12">
+      		    	<div class="item r" data-id="item-" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+      					<div class="item-media ">
+      						<a class="item-media-content" style="background-image: url('images/lethergo.jpg');"></a>
+      					</div>
+      					<div class="item-info">
+      						<div class="item-title text-ellipsis">
+      							<a>Let Her Go</a>
+      						</div>
+      						<div class="item-author text-sm text-ellipsis ">
+      							<a class="text-muted">Passenger</a>
+      						</div>
+      		
+      		
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+		  	<h6 class="text text-muted">Go mobile</h6>
+		  	<div class="btn-groups">
+		          <a class="btn btn-sm dark lt m-r-xs" style="width: 135px">
+		            <span class="pull-left m-r-sm">
+		              <i class="fa fa-apple fa-2x"></i>
+		            </span>
+		            <span class="clear text-left l-h-1x">
+		              <span class="text-muted text-xxs">Download on the</span>
+		              <b class="block m-b-xs">App Store</b>
+		            </span>
+		          </a>
+		          <a class="btn btn-sm dark lt" style="width: 133px">
+		            <span class="pull-left m-r-sm">
+		              <i class="fa fa-play fa-2x"></i>
+		            </span>
+		            <span class="clear text-left l-h-1x">
+		              <span class="text-muted text-xxs">Get it on</span>
+		              <b class="block m-b-xs m-r-xs">Google Play</b>
+		            </span>
+		          </a>
+		      </div>
+		      <div class="b-b m-y"></div>
+		      <div class="nav text-sm _600">
+		      	<a class="nav-link text-muted m-r-xs">About</a>
+		      	<a class="nav-link text-muted m-r-xs">Contact</a>
+		      	<a class="nav-link text-muted m-r-xs">Legal</a>
+		      	<a class="nav-link text-muted m-r-xs">Policy</a>
+		      </div>
+		      <p class="text-muted text-xs p-b-lg">&copy; Copyright 2022</p>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<!-- ############ PAGE END-->
+
+    </div>
+  </div>
+  <!-- / -->
+
+  
+  <!-- ############ SWITHCHER START-->
+  <div id="switcher">
+	<div class="switcher white" id="sw-theme">
+	  <a data-ui-toggle-class="active" data-ui-target="#sw-theme" class="white sw-btn">
+		<i class="fa fa-gear text-muted"></i>
+	  </a>
+	  <div class="box-header">
+		<strong>Theme Switcher</strong>
+	  </div>
+	  <div class="box-divider"></div>
+	  <div class="box-body">
+          <p>Colors:</p>
+          <p data-target="color">
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+				<input type="radio" name="color" value="light greeny">
+				<i class="light green">Green</i>
+			</label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="accent">
+              <i class="accent">Purple</i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warn">
+              <i class="warn">Yellow</i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="success">
+              <i class="success">Light Green</i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="info">
+              <i class="info">Black</i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="blue">
+              <i class="blue">Blue</i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warning">
+              <i class="warning">Pink</i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="danger">
+              <i class="danger">Red Pink</i>
+            </label>
+          </p>
+          <p>Themes:</p>
+          <div data-target="bg" class="text-u-c text-center _600 clearfix">
+            <label class="p-a col-xs-3 black pointer m-a-0">
+              <input type="radio" name="theme" value="black" hidden>
+              <i class="active-checked fa fa-check"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- ############ SWITHCHER END-->
+  <!-- ############ SEARCH START -->
+    <div class="modal white lt fade" id="search-modal" data-backdrop="false">
+      <a data-dismiss="modal" class="text-muted text-lg p-x modal-close-btn">&times;</a>
+      <div class="row-col">
+        <div class="p-a-lg h-v row-cell v-m">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <div id="search-result" class="animated fadeIn">
+                <div class="row">
+                  <div class="col-sm-12">
+					<div class="box">
+						<div class="item">
+							<img src="images/liveig.jpg" alt="." class="w-full">
+						</div>
+						<div class="p-a">
+							<div class="text-muted m-b-xs">
+								<a class="m-r"><i class="fa fa-heart-o"></i> 34</a>
+								<a><i class="fa fa-bookmark-o"></i> 20</a>
+							</div>
+							<div class="m-b h-2x"><a class="_800">Happy Birthday Fanny !</a></div>
+							<div class="m-b h-3x">
+								<div class="m-b-sm">"May your birthday be filled with laughter!"</div>
+								<a><img src="images/48.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/49.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/38.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/32.jpg" alt="." class="w-32 rounded"></a>
+								<a class="btn btn-sm danger rounded"><i class="fa fa-plus"></i> 99</a>
+							</div>
+							<div><a class="btn btn-xs white">Read More</a></div>
+						</div>
+					</div>
+				  </div>
+                </div>
+              </div>
+              <div id="top-search" class="btn-groups">
+                <strong class="text-muted">Hobinya : </strong>
+                <a class="btn btn-xs white">Ngambek</a> 
+                <a class="btn btn-xs white">Marah2</a> 
+                <a class="btn btn-xs white">Jamet</a> 
+                <a class="btn btn-xs white">gamau diliat lewat spion</a> 
+                <a class="btn btn-xs white">Suka mukulin helm</a> 
+                <a class="btn btn-xs white">Hiatus</a> 
+                <a class="btn btn-xs white">Si paling ngambis</a> 
+                <a class="btn btn-xs white">teriak2 dijalan</a> 
+                <a class="btn btn-xs white">Suka mas gilang</a> 
+                <a class="btn btn-xs white">Skrng dideketin cowo up</a> 
+                <a class="btn btn-xs white">dah itu aja</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ############ SEARCH END -->
+  <!-- ############ SHARE START -->
+  <div id="share-modal" class="modal fade animate">
+    <div class="modal-dialog">
+      <div class="modal-content fade-down">
+        <div class="modal-header">
+  
+          <h5 class="modal-title">Share</h5>
+        </div>
+        <div class="modal-body p-lg">
+          <div id="share-list" class="m-b">
+            <a class="btn btn-icon btn-social rounded btn-social-colored indigo" title="Facebook">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-facebook"></i>
+            </a>
+  
+            <a class="btn btn-icon btn-social rounded btn-social-colored light-blue" title="Twitter">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-twitter"></i>
+            </a>
+  
+            <a class="btn btn-icon btn-social rounded btn-social-colored red-600" title="Google+">
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-google-plus"></i>
+            </a>
+  
+            <a class="btn btn-icon btn-social rounded btn-social-colored blue-grey-600" title="Trumblr">
+                <i class="fa fa-tumblr"></i>
+                <i class="fa fa-tumblr"></i>
+            </a>
+  
+            <a class="btn btn-icon btn-social rounded btn-social-colored red-700" title="Pinterst">
+                <i class="fa fa-pinterest"></i>
+                <i class="fa fa-pinterest"></i>
+            </a>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ############ SHARE END -->
+
+<!-- ############ LAYOUT END-->
+  </div>
+
+<!-- build:js scripts/app.min.js -->
+<!-- jQuery -->
+  <script src="libs/jquery/dist/jquery.js"></script>
+<!-- Bootstrap -->
+  <script src="libs/tether/dist/js/tether.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+  <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="libs/jquery.stellar/jquery.stellar.min.js"></script>
+  <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="libs/jscroll/jquery.jscroll.min.js"></script>
+  <script src="libs/PACE/pace.min.js"></script>
+  <script src="libs/jquery-pjax/jquery.pjax.js"></script>
+
+  <script src="libs/mediaelement/build/mediaelement-and-player.min.js"></script>
+  <script src="libs/mediaelement/build/mep.js"></script>
+  <script src="scripts/player.js"></script>
+
+  <script src="scripts/config.lazyload.js"></script>
+  <script src="scripts/ui-load.js"></script>
+  <script src="scripts/ui-jp.js"></script>
+  <script src="scripts/ui-include.js"></script>
+  <script src="scripts/ui-device.js"></script>
+  <script src="scripts/ui-form.js"></script>
+  <script src="scripts/ui-nav.js"></script>
+  <script src="scripts/ui-screenfull.js"></script>
+  <script src="scripts/ui-scroll-to.js"></script>
+  <script src="scripts/ui-toggle-class.js"></script>
+  <script src="scripts/ui-taburl.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/site.js"></script>
+  <script src="scripts/ajax.js"></script>
+<!-- endbuild -->
+</body>
+</html>

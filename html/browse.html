@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fanny - Nice Try Sadtember</title>
+  <meta name="description" content="Music, Musician, Bootstrap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/spotify_green_logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="images/spotify_green_logo.png">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+
+  <!-- build:css css/styles/app.min.css -->
+  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+  
+  <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.css" type="text/css" />
+  <link rel="stylesheet" href="libs/mediaelement/build/mediaelementplayer.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/mediaelement/build/mep.css" type="text/css" />
+
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="app dk" id="app">
+
+<!-- ############ LAYOUT START-->
+
+  <!-- content -->
+  <div id="content" class="app-content white bg" role="main">
+    <div class="app-header white lt box-shadow-z1">
+        <div class="navbar" data-pjax>
+              <a data-toggle="collapse" data-target="#navbar" class="navbar-item pull-right hidden-md-up m-r-0 m-l">
+                <i class="material-icons">menu</i>
+              </a>
+              <!-- brand -->
+              <a class="navbar-brand md">
+
+                <g fill-rule="evenodd" class="svelte-1gcdbl9">
+          
+                <img src="images/Spotify_Logo_RGB_White.png" alt="logo" class="logo">
+              </a>
+              <!-- / brand -->
+      
+              <!-- nabar right -->
+              <ul class="nav navbar-nav pull-right">
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="modal" data-target="#search-modal">
+                    <i class="fa fa-bell text-lg m-l"></i><b class="label rounded danger up">3</b>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <span class="hidden-xs-down btn btn-sm rounded primary _600">
+                      Upload
+                    </span>
+                    <span class="hidden-sm-up btn btn-sm btn-icon rounded primary">
+                      <i class="material-icons">file_upload</i>
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link clear" data-toggle="dropdown">
+                    <span class="avatar w-32">
+                      <img src="images/1.jpg" alt="...">
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <!-- / navbar right -->
+      
+              <!-- navbar collapse -->
+              <div class="collapse navbar-toggleable-sm l-h-0 text-center" id="navbar">
+                <!-- link and dropdown -->
+                <ul class="nav navbar-nav nav-md inline text-primary-hover" data-ui-nav>
+                  <li class="nav-item">
+                    <a href="artist.detail.html" class="nav-link">
+                      <span class="nav-text">Home</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="player.html" class="nav-link">
+                      <span class="nav-text">Playlist</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="browse.html" class="nav-link">
+                      <span class="nav-text">Nice Try Sadtember</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="ui.box.html" class="nav-link">
+                      <span class="nav-text">Quotes</span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- / link and dropdown -->
+              </div>
+              <!-- / navbar collapse -->
+        </div>
+    </div>
+    <div class="app-footer app-player grey bg">
+      <div class="playlist" style="width:100%"></div>
+    </div>
+    <div class="app-body" id="view">
+
+<!-- ############ PAGE START-->
+
+<div class="page-content">
+  <div class="row-col">
+    <div class="col-lg-9 b-r no-border-md">
+      <div class="padding">
+        
+
+        <div class="page-title m-b">
+          <h1 class="inline m-a-0">NT Sadtember</h1>
+          <div class="dropdown inline">
+            <button class="btn btn-sm no-bg h4 m-y-0 v-b dropdown-toggle text-primary" data-toggle="dropdown">All</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item active">
+                All
+              </a>
+              <a class="dropdown-item">
+                acoustic
+              </a>
+              <a class="dropdown-item">
+                ambient
+              </a>
+              <a class="dropdown-item">
+                blues
+              </a>
+              <a class="dropdown-item">
+                classical
+              </a>
+              <a class="dropdown-item">
+                country
+              </a>
+              <a class="dropdown-item">
+                electronic
+              </a>
+              <a class="dropdown-item">
+                emo
+              </a>
+              <a class="dropdown-item">
+                folk
+              </a>
+              <a class="dropdown-item">
+                hardcore
+              </a>
+              <a class="dropdown-item">
+                hip hop
+              </a>
+              <a class="dropdown-item">
+                indie
+              </a>
+              <a class="dropdown-item">
+                jazz
+              </a>
+              <a class="dropdown-item">
+                latin
+              </a>
+              <a class="dropdown-item">
+                metal
+              </a>
+              <a class="dropdown-item">
+                pop
+              </a>
+              <a class="dropdown-item">
+                pop punk
+              </a>
+              <a class="dropdown-item">
+                punk
+              </a>
+              <a class="dropdown-item">
+                reggae
+              </a>
+              <a class="dropdown-item">
+                rnb
+              </a>
+              <a class="dropdown-item">
+                rock
+              </a>
+              <a class="dropdown-item">
+                soul
+              </a>
+              <a class="dropdown-item">
+                world
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row m-b">
+      		<div class="row">
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-61" data-src="../html/audio/Ed Sheeran - Perfect (Lyrics).mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/edsheeran.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Perfect</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Ed Sheeran</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-17" data-src="../html/audio/Lewis Capaldi - Before You Go (Lyrics)_c-KFmp9MMmQ.mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/beforeyougo.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Before You Go</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Lewis Capaldi</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-64" data-src="../html/audio/Passenger Let Her Go (128kbps).mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/lethergo.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Let Her Go</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Passenger</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-62" data-src="../html/audio/Tom Odell - Another Love (Official Video)_MwpMEbgC7DA.mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/anotherlove.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Another Love</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Tom Odell</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-63" data-src="../html/audio/Alexander 23 - IDK You Yet (Lyrics)_fXe0UTeyhgU.mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/IDK.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>IDK You Yet</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Alexander 23</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-65" data-src="../html/audio/Kina get you the moon ft Snow (128kbps).mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/getyouthemoon.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Get You The Moon (feat. Snøw)</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Kina, Snøw</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-66" data-src="../html/audio/Lukas Graham - Love Someone (Lyrics)_WkDbbb0Lyc4.mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/lovesomeone.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Love Someone</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Lukas Graham</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-67" data-src="../html/audio/Kina - Can We Kiss Forever.mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/CanWeKissForever.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Can We Kiss Forever?</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Adriana Proenza, Kina</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-68" data-src="../html/audio/Crash Adams Give Me A Kiss (128kbps).mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/givemeakiss.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Give Me a Kiss</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Crash Adams</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-69" data-src="../html/audio/Joji Glimpse of Us (128kbps).mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/glimpeofus.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Glimpse of Us</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Joji</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-70" data-src="../html/audio/Abe Parker - Stupid Face (Official Lyric Video)_uo_k9Yi9eBY.mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/stupidface.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>Stupid Face</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Abe Parker</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+      			    <div class="col-xs-4 col-sm-4 col-md-3">
+      			    	<div class="item r" data-id="item-71" data-src="../html/audio/Gracie Abrams I miss you I m sorry (128kbps).mp3">
+      						<div class="item-media ">
+      							<a class="item-media-content" style="background-image: url('images/ImissyouImsorry.jpg');"></a>
+      							<div class="item-overlay center">
+      								<button class="btn-playpause">Play</button>
+      							</div>
+      						</div>
+      						<div class="item-info">
+      							<div class="item-overlay bottom text-right">
+      								<a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+      								<a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+      								<div class="dropdown-menu pull-right black lt"></div>
+      							</div>
+      							<div class="item-title text-ellipsis">
+      								<a>I miss you, I’m sorry</a>
+      							</div>
+      							<div class="item-author text-sm text-ellipsis ">
+      								<a class="text-muted">Gracie Abrams</a>
+      							</div>
+      			
+      			
+      						</div>
+      					</div>
+      				</div>
+              <div class="col-xs-4 col-sm-4 col-md-3">
+                <div class="item r" data-id="item-72" data-src="../html/audio/Alexander 23 - Hate Me If It Helps (Lyric Video)_-9gdcnMaUxU.mp3">
+                <div class="item-media ">
+                  <a class="item-media-content" style="background-image: url('images/hateme.jpg');"></a>
+                  <div class="item-overlay center">
+                    <button class="btn-playpause">Play</button>
+                  </div>
+                </div>
+                <div class="item-info">
+                  <div class="item-overlay bottom text-right">
+                    <a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                    <a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                    <div class="dropdown-menu pull-right black lt"></div>
+                  </div>
+                  <div class="item-title text-ellipsis">
+                    <a>Hate Me If It Helps</a>
+                  </div>
+                  <div class="item-author text-sm text-ellipsis ">
+                    <a class="text-muted">Alexander 23</a>
+                  </div>
+          
+          
+                </div>
+              </div>
+            </div>
+              <div class="col-xs-4 col-sm-4 col-md-3">
+                <div class="item r" data-id="item-74" data-src="../html/audio/Coldplay - Fix You Lyrics_lPL5P2cA-pM.mp3">
+                <div class="item-media ">
+                  <a class="item-media-content" style="background-image: url('images/fixyou.jpg');"></a>
+                  <div class="item-overlay center">
+                    <button class="btn-playpause">Play</button>
+                  </div>
+                </div>
+                <div class="item-info">
+                  <div class="item-overlay bottom text-right">
+                    <a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                    <a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                    <div class="dropdown-menu pull-right black lt"></div>
+                  </div>
+                  <div class="item-title text-ellipsis">
+                    <a>Fix You</a>
+                  </div>
+                  <div class="item-author text-sm text-ellipsis ">
+                    <a class="text-muted">Coldplay</a>
+                  </div>
+          
+          
+                </div>
+              </div>
+            </div>
+              <div class="col-xs-4 col-sm-4 col-md-3">
+                <div class="item r" data-id="item-73" data-src="../html/audio/Abe Parker - Butterflies (Official Lyric Video)_03l71gpGpBI.mp3">
+                <div class="item-media ">
+                  <a class="item-media-content" style="background-image: url('images/butterflies.jpg');"></a>
+                  <div class="item-overlay center">
+                    <button class="btn-playpause">Play</button>
+                  </div>
+                </div>
+                <div class="item-info">
+                  <div class="item-overlay bottom text-right">
+                    <a class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                    <a class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                    <div class="dropdown-menu pull-right black lt"></div>
+                  </div>
+                  <div class="item-title text-ellipsis">
+                    <a>Butterflies</a>
+                  </div>
+                  <div class="item-author text-sm text-ellipsis ">
+                    <a class="text-muted">Abe Parker</a>
+                  </div>
+          
+          
+                </div>
+              </div>
+            </div>
+      		</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-lg-3 w-xxl w-auto-md">
+      <div class="padding" style="bottom: 60px;" data-ui-jp="stick_in_parent">
+      	<h6 class="text text-muted">Go mobile</h6>
+      	<div class="btn-groups">
+              <a class="btn btn-sm dark lt m-r-xs" style="width: 135px">
+                <span class="pull-left m-r-sm">
+                  <i class="fa fa-apple fa-2x"></i>
+                </span>
+                <span class="clear text-left l-h-1x">
+                  <span class="text-muted text-xxs">Download on the</span>
+                  <b class="block m-b-xs">App Store</b>
+                </span>
+              </a>
+              <a class="btn btn-sm dark lt" style="width: 133px">
+                <span class="pull-left m-r-sm">
+                  <i class="fa fa-play fa-2x"></i>
+                </span>
+                <span class="clear text-left l-h-1x">
+                  <span class="text-muted text-xxs">Get it on</span>
+                  <b class="block m-b-xs m-r-xs">Google Play</b>
+                </span>
+              </a>
+          </div>
+          <div class="b-b m-y"></div>
+          <div class="nav text-sm _600">
+          	<a class="nav-link text-muted m-r-xs">About</a>
+          	<a class="nav-link text-muted m-r-xs">Contact</a>
+          	<a class="nav-link text-muted m-r-xs">Legal</a>
+          	<a class="nav-link text-muted m-r-xs">Policy</a>
+          </div>
+          <p class="text-muted text-xs p-b-lg">&copy; Copyright 2022</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ############ PAGE END-->
+
+    </div>
+  </div>
+  <!-- / -->
+
+  
+  <!-- ############ SWITHCHER START-->
+  <div id="switcher">
+    <div class="switcher white" id="sw-theme">
+      <a data-ui-toggle-class="active" data-ui-target="#sw-theme" class="white sw-btn">
+        <i class="fa fa-gear text-muted"></i>
+      </a>
+      <div class="box-header">
+        <strong>Theme Switcher</strong>
+      </div>
+      <div class="box-divider"></div>
+      <div class="box-body">
+          <p>Colors:</p>
+          <p data-target="color">
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+				<input type="radio" name="color" value="light greeny">
+				<i class="light green"></i>
+			</label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="accent">
+              <i class="accent"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warn">
+              <i class="warn"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="success">
+              <i class="success"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="info">
+              <i class="info"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="blue">
+              <i class="blue"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warning">
+              <i class="warning"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="danger">
+              <i class="danger"></i>
+            </label>
+          </p>
+          <p>Themes:</p>
+          <div data-target="bg" class="text-u-c text-center _600 clearfix">
+            <label class="p-a col-xs-3 black pointer m-a-0">
+              <input type="radio" name="theme" value="black" hidden>
+              <i class="active-checked fa fa-check"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- ############ SWITHCHER END-->
+  <!-- ############ SEARCH START -->
+    <div class="modal white lt fade" id="search-modal" data-backdrop="false">
+      <a data-dismiss="modal" class="text-muted text-lg p-x modal-close-btn">&times;</a>
+      <div class="row-col">
+        <div class="p-a-lg h-v row-cell v-m">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <div id="search-result" class="animated fadeIn">
+                <div class="row">
+                  <div class="col-sm-12">
+					<div class="box">
+						<div class="item">
+							<img src="images/liveig.jpg" alt="." class="w-full">
+						</div>
+						<div class="p-a">
+							<div class="text-muted m-b-xs">
+								<a class="m-r"><i class="fa fa-heart-o"></i> 34</a>
+								<a><i class="fa fa-bookmark-o"></i> 20</a>
+							</div>
+							<div class="m-b h-2x"><a class="_800">Happy Birthday Fanny !</a></div>
+							<div class="m-b h-3x">
+								<div class="m-b-sm">"May your birthday be filled with laughter!"</div>
+								<a><img src="images/48.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/49.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/38.jpg" alt="." class="w-32 rounded"></a>
+								<a><img src="images/32.jpg" alt="." class="w-32 rounded"></a>
+								<a class="btn btn-sm danger rounded"><i class="fa fa-plus"></i> 99</a>
+							</div>
+							<div><a class="btn btn-xs white">Read More</a></div>
+						</div>
+					</div>
+				  </div>
+                </div>
+              </div>
+              <div id="top-search" class="btn-groups">
+                <strong class="text-muted">Hobinya : </strong>
+                <a class="btn btn-xs white">Ngambek</a> 
+                <a class="btn btn-xs white">Marah2</a> 
+                <a class="btn btn-xs white">Jamet</a> 
+                <a class="btn btn-xs white">gamau diliat lewat spion</a> 
+                <a class="btn btn-xs white">Suka mukulin helm</a> 
+                <a class="btn btn-xs white">Hiatus</a> 
+                <a class="btn btn-xs white">Si paling ngambis</a> 
+                <a class="btn btn-xs white">teriak2 dijalan</a> 
+                <a class="btn btn-xs white">Suka mas gilang</a> 
+                <a class="btn btn-xs white">Skrng dideketin cowo up</a> 
+                <a class="btn btn-xs white">dah itu aja</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ############ SEARCH END -->
+  <!-- ############ SHARE START -->
+  <div id="share-modal" class="modal fade animate">
+    <div class="modal-dialog">
+      <div class="modal-content fade-down">
+        <div class="modal-header">
+  
+          <h5 class="modal-title">Share</h5>
+        </div>
+        <div class="modal-body p-lg">
+          <div id="share-list" class="m-b">
+            <a class="btn btn-icon btn-social rounded btn-social-colored indigo" title="Facebook">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-facebook"></i>
+            </a>
+  
+            <a class="btn btn-icon btn-social rounded btn-social-colored light-blue" title="Twitter">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-twitter"></i>
+            </a>
+  
+            <a class="btn btn-icon btn-social rounded btn-social-colored red-600" title="Google+">
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-google-plus"></i>
+            </a>
+  
+            <a class="btn btn-icon btn-social rounded btn-social-colored blue-grey-600" title="Trumblr">
+                <i class="fa fa-tumblr"></i>
+                <i class="fa fa-tumblr"></i>
+            </a>
+  
+            <a class="btn btn-icon btn-social rounded btn-social-colored red-700" title="Pinterst">
+                <i class="fa fa-pinterest"></i>
+                <i class="fa fa-pinterest"></i>
+            </a>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ############ SHARE END -->
+
+<!-- ############ LAYOUT END-->
+  </div>
+
+<!-- build:js scripts/app.min.js -->
+<!-- jQuery -->
+  <script src="libs/jquery/dist/jquery.js"></script>
+<!-- Bootstrap -->
+  <script src="libs/tether/dist/js/tether.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+  <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="libs/jquery.stellar/jquery.stellar.min.js"></script>
+  <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="libs/jscroll/jquery.jscroll.min.js"></script>
+  <script src="libs/PACE/pace.min.js"></script>
+  <script src="libs/jquery-pjax/jquery.pjax.js"></script>
+
+  <script src="libs/mediaelement/build/mediaelement-and-player.min.js"></script>
+  <script src="libs/mediaelement/build/mep.js"></script>
+  <script src="scripts/player.js"></script>
+
+  <script src="scripts/config.lazyload.js"></script>
+  <script src="scripts/ui-load.js"></script>
+  <script src="scripts/ui-jp.js"></script>
+  <script src="scripts/ui-include.js"></script>
+  <script src="scripts/ui-device.js"></script>
+  <script src="scripts/ui-form.js"></script>
+  <script src="scripts/ui-nav.js"></script>
+  <script src="scripts/ui-screenfull.js"></script>
+  <script src="scripts/ui-scroll-to.js"></script>
+  <script src="scripts/ui-toggle-class.js"></script>
+  <script src="scripts/ui-taburl.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/site.js"></script>
+  <script src="scripts/ajax.js"></script>
+<!-- endbuild -->
+</body>
+</html>
